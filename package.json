@@ -9,7 +9,8 @@
   "author": "Sezer Burkas",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "gsap": "file:../Desktop/gsap-bonus.tgz"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",

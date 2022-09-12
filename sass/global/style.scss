@@ -181,17 +181,19 @@ body{
     }
     .middle-card{
         flex:1 1 auto;
-        min-height:537px;
+        max-height:636px;
+        width: 70%;
+        padding-top: 4rem;
         img{
             display: block;
             margin: auto;
-            max-width:637px;
+            max-height: 100%;
         }
     }
     .slider-up-down{
         flex:0 0 auto;
         width:165px;
-        height:720px;
+        height:700px;
         overflow:hidden;
         .content{
             animation: scroll-animate 3s linear infinite alternate;

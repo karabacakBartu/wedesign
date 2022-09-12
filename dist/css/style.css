@@ -232,17 +232,19 @@ body {
 }
 .content-container .middle-card {
   flex: 1 1 auto;
-  min-height: 537px;
+  max-height: 636px;
+  width: 70%;
+  padding-top: 4rem;
 }
 .content-container .middle-card img {
   display: block;
   margin: auto;
-  max-width: 637px;
+  max-height: 100%;
 }
 .content-container .slider-up-down {
   flex: 0 0 auto;
   width: 165px;
-  height: 720px;
+  height: 700px;
   overflow: hidden;
 }
 .content-container .slider-up-down .content {
