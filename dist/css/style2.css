@@ -33,6 +33,11 @@ html, body {
   scroll-snap-align: start;
   height: 100vh;
 }
+@media screen and (max-width: 425px) {
+  .panel {
+    height: auto;
+  }
+}
 
 .header {
   display: flex;
@@ -41,13 +46,29 @@ html, body {
   text-align: center;
   padding: 10rem;
 }
+@media screen and (max-width: 425px) {
+  .header {
+    display: block;
+  }
+}
 .header .right {
   flex: 0 0 auto;
   width: 50%;
   position: relative;
   padding-top: 8rem;
 }
-.header .right h1 {
+@media screen and (max-width: 425px) {
+  .header .right {
+    width: 100%;
+  }
+}
+.header .left {
+  flex: 0 0 auto;
+  width: 50%;
+  position: relative;
+  padding-top: 8rem;
+}
+.header .left h1 {
   font-size: 17vh;
   color: #eee;
   font-family: "HelveticaTh";
@@ -57,7 +78,7 @@ html, body {
   position: relative;
   letter-spacing: 3px;
 }
-.header .right h1 span {
+.header .left h1 span {
   font-family: "Marck Script", cursive;
   color: #0b0b0b;
   font-size: 6vh;
@@ -68,11 +89,16 @@ html, body {
   transform: rotate(-19deg);
   animation: blink 1s linear infinite alternate;
 }
-.header .right label {
+.header .left label {
   font-size: 3rem;
   color: #eee;
   transform: translateY(100px);
   opacity: 0;
+}
+@media screen and (max-width: 1440px) {
+  .header .left label {
+    font-size: 2rem;
+  }
 }
 @keyframes blink {
   0% {
@@ -106,13 +132,38 @@ html, body {
     opacity: 1;
   }
 }
+@media screen and (max-width: 425px) {
+  .header .left {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header .left {
+    padding-top: 12rem !important;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .header {
+    padding: 8rem 4rem;
+  }
+  .header h1 {
+    font-size: 14vh !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header h1 {
+    font-size: 10vh !important;
+  }
+}
 
 .second {
   padding: 5rem 8rem;
   background-color: #2e3dac;
+  overflow: hidden;
 }
 .second p {
-  font-size: 1.3rem;
+  font-size: 1.05rem;
 }
 .second .row {
   display: flex;
@@ -149,6 +200,28 @@ html, body {
   transform: translateY(100px);
   opacity: 0;
 }
+@media screen and (max-width: 425px) {
+  .second .info-card {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .second .info-card .card-image {
+    width: 100%;
+  }
+  .second .info-card .card-content {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .second .info-card {
+    height: 320px;
+  }
+  .second .info-card h3 {
+    font-size: 1.4rem !important;
+  }
+}
 .second .left {
   margin-bottom: 5rem;
   transform: translateX(-400px);
@@ -172,6 +245,77 @@ html, body {
 .second .right .card-content {
   grid-column-start: 1;
   grid-column-end: 5;
+}
+@media screen and (max-width: 1440px) {
+  .second {
+    padding: 1rem 4rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .second {
+    height: auto;
+    padding: 1rem 3rem;
+  }
+  .second .row {
+    display: unset !important;
+  }
+}
+
+.third {
+  padding: 2rem 1rem;
+}
+.third .horizontal-cards {
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+  width: 25%;
+  opacity: 0;
+  transform: translateY(1000px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+.third .horizontal-cards .card-image img {
+  height: 100%;
+  width: 100%;
+}
+.third .horizontal-cards .card-content {
+  padding: 2rem;
+}
+.third .horizontal-cards .card-content p {
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 425px) {
+  .third .horizontal-cards {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .third {
+    padding: 1rem 3rem;
+  }
+}
+
+.yoyo {
+  padding: 2rem 2rem;
+}
+.yoyo .single-card {
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+  width: 90%;
+  opacity: 0;
+  border-radius: 6px;
+}
+.yoyo .single-card .card-image img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 425px) {
+  .yoyo .single-card {
+    width: 100% !important;
+  }
 }
 
 .blue {

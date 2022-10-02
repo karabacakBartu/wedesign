@@ -21,6 +21,9 @@ html, body {
   .panel {
     scroll-snap-align: start;
     height: 100vh;
+    @media screen and (max-width: $phone) {
+      height:auto;
+    }
   }
   
   .header {
@@ -29,7 +32,19 @@ html, body {
     background-image: none;
     text-align:center;
     padding: 10rem;
+    @media screen and (max-width: $phone) {
+      display:block;
+    }
     .right{
+      flex: 0 0 auto;
+      width:50%;
+      position: relative;
+      padding-top:8rem;
+      @media screen and (max-width: $phone) {
+        width:100%;
+      }
+    }
+    .left{
         flex: 0 0 auto;
         width:50%;
         position: relative;
@@ -61,6 +76,9 @@ html, body {
             color: #eee;
             transform: translateY(100px);
             opacity: 0;
+            @media screen and (max-width: $md-laptop) {
+              font-size:2rem;
+            }
         }
         @keyframes blink {
             0% { opacity: 0 }
@@ -74,13 +92,35 @@ html, body {
             80% { opacity: 1 }
             100% { opacity: 1 }
         }
+        @media screen and (max-width: $phone) {
+          width:100%;
+          padding-top:0;
+        }
+
+    }
+    @media screen and (max-width: $sm-laptop) {
+      .left{
+        padding-top:12rem!important;
+      }
+    }
+    @media screen and (max-width: $md-laptop) {
+      padding: 8rem 4rem;
+      h1{
+        font-size:14vh!important;
+      }
+    }
+    @media screen and (max-width: $phone) {
+      h1{
+        font-size:10vh!important;
+      }
     }
   }
   .second{
     padding: 5rem 8rem;
     background-color: #2e3dac;
+    overflow:hidden;
     p{
-      font-size: 1.3rem;
+      font-size: 1.05rem;
     }
     .row{
         display:flex;
@@ -111,10 +151,29 @@ html, body {
             }
         }
         .card-content{
+
             padding:2rem;
             flex:1 0 0%;
             transform: translateY(100px);
             opacity:0;
+        }
+        @media screen and (max-width: $phone) {
+          display:block;
+          width:100%;
+          height:auto;
+          .card-image{
+            width:100%;
+          }
+          .card-content{
+            flex:0 0 auto;
+            width:100%;
+          }
+        }
+        @media screen and (max-width: $md-laptop) {
+         height:320px;
+         h3{
+          font-size:1.4rem!important;
+         }
         }
     }
     .left{
@@ -140,6 +199,69 @@ html, body {
             grid-column-start: 1;
             grid-column-end: 5;
         }
+    }
+    @media screen and (max-width: $md-laptop) {
+      padding: 1rem 4rem;
+    }
+    @media screen and (max-width: $phone) {
+      height:auto;
+      padding: 1rem 3rem;
+      .row{
+        display:unset!important;
+      }
+    }
+  }
+  .third{
+    padding:2rem 1rem;
+    .horizontal-cards{
+        margin:0;
+        padding:0;
+        flex: 0 0 auto;
+        width: 25%;
+        opacity:0;
+        transform: translateY(1000px);
+        background: rgba(255,255,255, .9);
+        box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.4);
+        border-radius: 6px;
+      .card-image{
+        img{
+          height:100%;
+          width:100%;
+        }
+      }
+      .card-content{
+        padding:2rem;
+        p{
+          font-size:1.1rem;
+        }
+      }
+      @media screen and (max-width: $phone) {
+        width:100%;
+        margin-bottom:2rem;
+      }
+    }
+    @media screen and (max-width: $phone) {
+      padding: 1rem 3rem;
+    }
+  }
+  .yoyo{
+    padding:2rem 2rem;
+    .single-card{
+      margin:0;
+      padding:0;
+      flex: 0 0 auto;
+      width: 90%;
+      opacity:0;
+      border-radius: 6px;
+      .card-image{
+        img{
+          width:100%;
+          height:100%;
+        }
+      }
+      @media screen and (max-width: $phone) {
+          width:100%!important;
+      }
     }
   }
   .blue{
